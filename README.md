@@ -15,6 +15,12 @@
 
 This project combines **BERTopic-based topic modeling** with **sentiment analysis** to analyze Korean mobile banking app reviews from **Google Play Store** and **Apple App Store**. The dual-analysis approach identifies key themes in user feedback while quantifying emotional sentiment, enabling data-driven UX improvements and strategic decision-making for financial mobile applications.
 
+### Research Background
+
+This project extends a previous LDA-based study on the same dataset. While LDA provided initial insights, several limitations emerged when applied to Korean app reviews. The bag-of-words representation could not distinguish context-dependent meanings, where phrases like "로그인이 안 됨" (login fails) and "로그인이 잘 됨" (login works) share identical vocabulary but opposite sentiments. Additionally, LDA struggled with short review texts due to sparse word co-occurrence patterns and failed to recognize semantic similarity between domain terms such as "공동인증서" and "금융인증서."
+
+BERTopic overcomes these challenges through multilingual BERT embeddings that capture semantic context, HDBSCAN clustering that discovers natural topic structures without predefined counts, and robust short-text handling. This methodological shift produced cleaner topic separation—clearly distinguishing functional complaints from emotional expressions—and generated more actionable UX improvement recommendations.
+
 ### Key Components
 
 | Component | Technology | Purpose |
@@ -153,6 +159,12 @@ topics, probs = topic_model.fit_transform(docs)
 ### 프로젝트 개요
 
 본 프로젝트는 **BERTopic 기반 토픽 모델링**과 **감성 분석**을 결합하여 **Google Play Store**와 **Apple App Store**의 한국 금융 모바일 앱 리뷰를 분석합니다. 이중 분석 접근법을 통해 사용자 피드백의 핵심 주제를 식별하고 감정적 감성을 정량화하여, 데이터 기반의 UX 개선 및 전략적 의사결정을 지원합니다.
+
+### 연구 배경
+
+본 프로젝트는 동일 데이터셋에 LDA를 적용한 이전 연구의 확장입니다. LDA가 초기 인사이트를 제공했으나, 한국어 앱 리뷰 분석에서 여러 한계가 드러났습니다. Bag-of-words 표현 방식은 "로그인이 안 됨"과 "로그인이 잘 됨"처럼 동일 어휘를 공유하지만 정반대 의미를 가진 문맥 의존적 표현을 구분하지 못했습니다. 또한 짧은 리뷰 텍스트에서 단어 동시 출현 패턴이 희소해지는 문제와 "공동인증서", "금융인증서" 같은 도메인 용어 간 의미적 유사성을 인식하지 못하는 한계가 있었습니다.
+
+BERTopic은 의미적 문맥을 포착하는 다국어 BERT 임베딩, 사전 정의 없이 자연스러운 토픽 구조를 발견하는 HDBSCAN 클러스터링, 짧은 텍스트의 강건한 처리를 통해 이러한 문제를 해결합니다. 이 방법론적 전환으로 기능적 불만과 감정적 표현을 명확히 구분하는 깔끔한 토픽 분리가 가능해졌고, 더 실행 가능한 UX 개선 권고안을 도출할 수 있었습니다.
 
 ### 주요 구성 요소
 
