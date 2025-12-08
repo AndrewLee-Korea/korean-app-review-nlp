@@ -9,7 +9,7 @@
 
 ---
 
-## 🇺🇸 English
+## English Version
 
 ### Project Overview
 
@@ -154,7 +154,7 @@ topics, probs = topic_model.fit_transform(docs)
 
 ---
 
-## 🇰🇷 한국어
+## 한국어 Version
 
 ### 프로젝트 개요
 
